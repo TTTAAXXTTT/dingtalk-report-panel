@@ -1,0 +1,27 @@
+# Credentials, login state and runtime output
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.db
+*.db-*
+*.sqlite*
+*.log
+data/
+outputs/
+backups/
+.tools/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+node_modules/
+dist/
+.pytest_cache/
+.coverage
+coverage/
+.DS_Store
+Thumbs.db

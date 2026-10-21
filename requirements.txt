@@ -1,0 +1,5 @@
+fastapi>=0.141,<0.142
+uvicorn>=0.52,<0.53
+pydantic>=2.13,<2.14
+httpx>=0.28,<0.29
+tzdata>=2024.1
