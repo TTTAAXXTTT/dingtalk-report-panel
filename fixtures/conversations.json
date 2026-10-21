@@ -1,0 +1,48 @@
+{
+  "complete": true,
+  "conversations": [
+    {
+      "openConversationId": "cid-fixture-project",
+      "title": "演示项目群（合成测试数据）",
+      "conversationType": 2,
+      "lastActiveTime": "2026-08-23T16:20:00+08:00",
+      "participants": [
+        {"openDingTalkId": "fixture-me", "name": "测试用户"},
+        {"openDingTalkId": "fixture-a", "name": "测试同事甲"}
+      ],
+      "available": true
+    },
+    {
+      "openConversationId": "cid-fixture-direct",
+      "title": "测试联系人（合成测试数据）",
+      "conversationType": 1,
+      "lastActiveTime": "2026-08-22T11:30:00+08:00",
+      "participants": [
+        {"openDingTalkId": "fixture-b", "name": "测试联系人"}
+      ],
+      "available": true
+    },
+    {
+      "openConversationId": "cid-fixture-empty-direct",
+      "title": "空时间窗单聊（合成测试数据）",
+      "conversationType": 1,
+      "lastActiveTime": "2026-08-01T09:00:00+08:00",
+      "participants": [
+        {"openDingTalkId": "fixture-c", "name": "测试联系人乙"}
+      ],
+      "available": true
+    }
+  ],
+  "count": 3,
+  "failedCount": 0,
+  "failures": [],
+  "hasMore": false,
+  "nextCursor": 0,
+  "pagesFetched": 2,
+  "paginationKnown": true,
+  "partial": false,
+  "stopReason": "source_complete",
+  "truncated": false,
+  "truncatedByPageLimit": false,
+  "truncatedByResultLimit": false
+}

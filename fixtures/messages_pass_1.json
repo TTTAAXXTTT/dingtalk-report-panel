@@ -1,0 +1,137 @@
+{
+  "list_all": {
+    "success": true,
+    "paging": {
+      "pages": 2,
+      "total": 5,
+      "truncated": false,
+      "hasMore": false
+    },
+    "result": {
+      "hasMore": false,
+      "nextCursor": "",
+      "conversationMessagesList": [
+        {
+          "openConversationId": "cid-fixture-project",
+          "title": "演示项目群（合成测试数据）",
+          "messages": [
+            {
+              "openMessageId": "fx-before",
+              "sender": {"openDingTalkId": "fixture-a", "name": "测试同事甲"},
+              "msgType": "text",
+              "isBot": false,
+              "isSystem": false,
+              "content": {"text": "【合成测试】开始边界之前的消息"},
+              "createTime": "2026-08-16T23:59:59+08:00"
+            },
+            {
+              "openMessageId": "fx-start",
+              "sender": {"openDingTalkId": "fixture-me", "name": "测试用户"},
+              "msgType": "text",
+              "isBot": false,
+              "isSystem": false,
+              "content": {"text": "【合成测试】确认本次测试范围和验收标准"},
+              "createTime": "2026-08-17T00:00:00+08:00"
+            },
+            {
+              "openMessageId": "fx-project-2",
+              "sender": {"openDingTalkId": "fixture-a", "name": "测试同事甲"},
+              "msgType": "text",
+              "isBot": false,
+              "isSystem": false,
+              "content": {"text": "【合成测试】风险：测试接口需要补充边界用例"},
+              "createTime": "2026-08-20T10:15:00+08:00"
+            },
+            {
+              "openMessageId": "fx-end",
+              "sender": {"openDingTalkId": "fixture-me", "name": "测试用户"},
+              "msgType": "text",
+              "isBot": false,
+              "isSystem": false,
+              "content": {"text": "【合成测试】结束边界消息，不应进入报告"},
+              "createTime": "2026-08-24T00:00:00+08:00"
+            }
+          ]
+        },
+        {
+          "openConversationId": "cid-fixture-direct",
+          "title": "测试联系人（合成测试数据）",
+          "messages": [
+            {
+              "openMessageId": "fx-dm-duplicate",
+              "sender": {"openDingTalkId": "fixture-b", "name": "测试联系人"},
+              "msgType": "text",
+              "isBot": false,
+              "isSystem": false,
+              "content": {"text": "【合成测试】请在周五前确认测试结论"},
+              "createTime": "2026-08-21T11:30:00+08:00"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "targeted": {
+    "success": true,
+    "paging": {
+      "pages": 2,
+      "total": 4,
+      "truncated": false,
+      "hasMore": false
+    },
+    "result": {
+      "hasMore": false,
+      "nextCursor": "",
+      "conversationMessagesList": [
+        {
+          "openConversationId": "cid-fixture-project",
+          "title": "演示项目群（合成测试数据）",
+          "messages": [
+            {
+              "openMessageId": "fx-start",
+              "sender": {"openDingTalkId": "fixture-me", "name": "测试用户"},
+              "msgType": "text",
+              "isBot": false,
+              "isSystem": false,
+              "content": {"text": "【合成测试】确认本次测试范围和验收标准"},
+              "createTime": "2026-08-17T00:00:00+08:00"
+            },
+            {
+              "openMessageId": "fx-project-2",
+              "sender": {"openDingTalkId": "fixture-a", "name": "测试同事甲"},
+              "msgType": "text",
+              "isBot": false,
+              "isSystem": false,
+              "content": {"text": "【合成测试】风险：测试接口需要补充边界用例"},
+              "createTime": "2026-08-20T10:15:00+08:00"
+            }
+          ]
+        },
+        {
+          "openConversationId": "cid-fixture-direct",
+          "title": "测试联系人（合成测试数据）",
+          "messages": [
+            {
+              "openMessageId": "fx-dm-duplicate",
+              "sender": {"openDingTalkId": "fixture-b", "name": "测试联系人"},
+              "msgType": "text",
+              "isBot": false,
+              "isSystem": false,
+              "content": {"text": "【合成测试】请在周五前确认测试结论"},
+              "createTime": "2026-08-21T11:30:00+08:00"
+            },
+            {
+              "openMessageId": "fx-dm-targeted-only",
+              "sender": {"openDingTalkId": "fixture-me", "name": "测试用户"},
+              "msgType": "text",
+              "isBot": false,
+              "isSystem": false,
+              "content": {"text": "【合成测试】该消息用于验证定向源补充和差异披露"},
+              "createTime": "2026-08-22T09:00:00+08:00"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
