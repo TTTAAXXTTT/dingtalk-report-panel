@@ -129,7 +129,7 @@ class StorageTests(unittest.TestCase):
         for artifact in artifacts:
             path = pathlib.Path(artifact["path"])
             self.assertTrue(path.is_file())
-            self.assertTrue(str(path).startswith(str(self.root)))
+            self.assertTrue(path.resolve().is_relative_to(self.root.resolve()))
             self.assertEqual(64, len(artifact["sha256"]))
         repeated = self.storage.write_job_artifact(
             "job-artifacts", "manifest", {"version": 1}
