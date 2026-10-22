@@ -1,5 +1,12 @@
 # 钉钉周报面板
 
+## 直接下载使用
+
+**[下载 Windows x64 便携版 v1.3.9](https://github.com/TTTAAXXTTT/dingtalk-report-panel/releases/download/v1.3.9/dingtalk-report-panel-Windows-x64-v1.3.9.zip)** · [发布说明及 SHA-256 校验](https://github.com/TTTAAXXTTT/dingtalk-report-panel/releases/tag/v1.3.9)
+
+完整解压后双击 `04_演示模式.cmd`；真实使用先运行 `01_首次使用.cmd` 登录，再用 `02_日常启动.cmd`。包含 Python、依赖和已校验的 DWS，无需安装 Python 或 Node。
+
+
 在 Windows 本机运行的手动报告工具：选择钉钉单聊或群聊、时间范围和报告本人，先预览确认，再生成 **本周已完成事项** 与 **周报（本周工作、下周计划）** 两份独立报告。
 
 基于原项目 1.3.9 整理，包含完整 Python 后端、网页前端、DWS 适配器、证据校验引擎、存储层、四个启动入口、安装脚本与全部原有测试。MIT 开源。
@@ -58,3 +65,4 @@ python tools/check_publication.py
 | 根目录 CMD / PS1 | 安装、登录、启动和演示入口 |
 
 本项目不属于钉钉官方产品。DWS、模型和 Python 依赖由各自项目提供，见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
