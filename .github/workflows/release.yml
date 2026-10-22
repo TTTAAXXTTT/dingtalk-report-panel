@@ -76,6 +76,10 @@ jobs:
                   target.parent.mkdir(parents=True, exist_ok=True)
                   shutil.copy2(BASE / relative, target)
 
+          # Windows PowerShell 5.1 needs a BOM for scripts containing Chinese text.
+          for script in dest.rglob('*.ps1'):
+              script.write_text(script.read_text(encoding='utf-8-sig'), encoding='utf-8-sig')
+
           runtime = dest / 'runtime' / 'python'
           packages = dest / 'runtime' / 'packages'
           runtime.mkdir(parents=True)
@@ -84,7 +88,7 @@ jobs:
           download('https://www.python.org/ftp/python/3.12.10/python-3.12.10-embed-amd64.zip', python_zip)
           with zipfile.ZipFile(python_zip) as z:
               z.extractall(runtime)
-          (runtime / 'python312._pth').write_text('python312.zip\n.\n../packages\n../..\nimport site\n', encoding='ascii')
+          (runtime / 'python312._pth').write_text('python312.zip\n.\n..\\packages\n..\\..\nimport site\n', encoding='ascii')
           provenance = {'repository': REPO, 'version': VERSION, 'commit': os.environ['GITHUB_SHA'],
                         'python': '3.12.10', 'python_zip_sha256': hashlib.sha256(python_zip.read_bytes()).hexdigest()}
           if (source / 'requirements.txt').is_file():
@@ -132,6 +136,9 @@ jobs:
               instructions = '完整解压，双击“启动交易台.cmd”。无需安装 Python/Node。首次启动请在本机配置 API。默认不自动开仓；真实策略仍须人工启用。停止服务请用“停止本目录服务.cmd”。本包保留原有进程监督及恢复行为，使用前阅读 README 和风险说明。'
           elif REPO == 'dingtalk-report-panel':
               run('powershell', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', dest / 'setup_dws.ps1', cwd=dest)
+              licenses = dest / 'runtime/licenses'
+              licenses.mkdir(parents=True)
+              download('https://raw.githubusercontent.com/DingTalk-Real-AI/dingtalk-workspace-cli/v1.0.59/LICENSE', licenses / 'DWS-LICENSE')
               cmd('01_首次使用.cmd', 'powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0login_dingtalk.ps1"\nif errorlevel 1 (pause & exit /b 1)\npowershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0start.ps1"\npause')
               cmd('02_日常启动.cmd', 'powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0start.ps1"\npause')
               cmd('03_重新登录钉钉.cmd', 'powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0login_dingtalk.ps1"\npause')
