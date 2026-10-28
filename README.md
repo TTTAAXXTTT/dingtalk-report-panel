@@ -2,7 +2,7 @@
 
 ## 直接下载使用
 
-**[下载 Windows x64 便携版 v1.3.9](https://github.com/TTTAAXXTTT/dingtalk-report-panel/releases/download/v1.3.9/dingtalk-report-panel-Windows-x64-v1.3.9.zip)** · [发布说明及 SHA-256 校验](https://github.com/TTTAAXXTTT/dingtalk-report-panel/releases/tag/v1.3.9)
+**[下载 Windows x64 便携版 v1.3.10](https://github.com/TTTAAXXTTT/dingtalk-report-panel/releases/download/v1.3.10/dingtalk-report-panel-Windows-x64-v1.3.10.zip)** · [发布说明及 SHA-256 校验](https://github.com/TTTAAXXTTT/dingtalk-report-panel/releases/tag/v1.3.10)
 
 完整解压后双击 `04_演示模式.cmd`；真实使用先运行 `01_首次使用.cmd` 登录，再用 `02_日常启动.cmd`。包含 Python、依赖和已校验的 DWS，无需安装 Python 或 Node。
 
