@@ -16,7 +16,7 @@ jobs:
     env:
       PYTHONUTF8: '1'
       RELEASE_REPO: dingtalk-report-panel
-      RELEASE_VERSION: v1.3.9
+      RELEASE_VERSION: v1.3.10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -194,8 +194,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          if ! gh release view v1.3.9 >/dev/null 2>&1; then
-            gh release create v1.3.9 --target "$GITHUB_SHA" --draft --title "钉钉周报面板 v1.3.9 · Windows 便携版" --notes '下载 dingtalk-report-panel-Windows-x64-v1.3.9.zip 并完整解压。已包含 Windows x64 Python 运行环境及应用依赖，不需要安装 Python/Node。使用根目录启动 CMD，详见包内“使用说明-先读.txt”。经过源码回归与包内运行时启动核验；账号、模型及设备依赖仍由使用者配置。'
+          if ! gh release view v1.3.10 >/dev/null 2>&1; then
+            gh release create v1.3.10 --target "$GITHUB_SHA" --draft --title "钉钉周报面板 v1.3.10 · Windows 便携版" --notes '下载 dingtalk-report-panel-Windows-x64-v1.3.10.zip 并完整解压。已包含 Windows x64 Python 运行环境及应用依赖，不需要安装 Python/Node。使用根目录启动 CMD，详见包内“使用说明-先读.txt”。经过源码回归与包内运行时启动核验；账号、模型及设备依赖仍由使用者配置。'
           fi
-          gh release upload v1.3.9 release/dingtalk-report-panel-Windows-x64-v1.3.9.zip release/SHA256SUMS.txt --clobber
-          gh release edit v1.3.9 --draft=false --latest
+          gh release upload v1.3.10 release/dingtalk-report-panel-Windows-x64-v1.3.10.zip release/SHA256SUMS.txt --clobber
+          gh release edit v1.3.10 --draft=false --latest

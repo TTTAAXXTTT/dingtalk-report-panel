@@ -2177,3 +2177,11 @@
     return JSON.stringify(value);
   }
 })();
+
+// Keep attribution separate from application actions and data requests.
+(() => {
+  const dialog = document.getElementById('authorDialog');
+  const signature = document.getElementById('authorSignature');
+  signature.addEventListener('click', () => dialog.showModal());
+  dialog.showModal();
+})();
